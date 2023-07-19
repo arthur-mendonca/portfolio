@@ -3,4 +3,5 @@ export const userData = {
   githubUser: "arthur-mendonca",
   linkedinUser: "arthur-silva-mendonça",
   whatsappNumber: "+5532988571631",
+  about: "Sobre mim",
 };

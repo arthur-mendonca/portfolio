@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import {
   Navbar as NavbarWrapper,
@@ -11,7 +12,14 @@ import {
   NavbarMobileArea,
 } from "./style";
 
-import { FaGithub, FaLinkedinIn, FaBars, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaBars,
+  FaWhatsapp,
+  FaHome,
+} from "react-icons/fa";
+import { SiXdadevelopers } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container } from "@/styles/Global";
@@ -63,6 +71,11 @@ export const NavBar = (): JSX.Element => {
 };
 
 export const NavLinks = (): JSX.Element => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isAboutPage = location.pathname.endsWith("/about");
+
   return (
     <NavbarLinks>
       {userData.whatsappNumber && (
@@ -98,6 +111,17 @@ export const NavLinks = (): JSX.Element => {
           href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
         >
           <FaLinkedinIn />
+        </Button>
+      )}
+      {userData.about && (
+        <Button
+          type="icon"
+          target="_blank"
+          as="a"
+          aria-label="LinkedIn"
+          onClick={() => navigate(isAboutPage ? "/" : "/about")}
+        >
+          {isAboutPage ? <FaHome /> : <SiXdadevelopers />}
         </Button>
       )}
     </NavbarLinks>
