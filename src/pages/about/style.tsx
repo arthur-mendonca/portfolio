@@ -59,6 +59,7 @@ export const MiddleBlock = styled("div", {
   display: "flex",
   height: "100%",
   alignItems: "center",
+  lineHeight: "1.5rem",
 });
 
 export const LastBlock = styled("div", {
