@@ -4,4 +4,5 @@ export const userData = {
   linkedinUser: "arthur-silva-mendonça",
   whatsappNumber: "+5532988571631",
   about: "Sobre mim",
+  projetos: "Projetos",
 };

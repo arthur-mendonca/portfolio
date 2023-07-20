@@ -20,6 +20,7 @@ import {
   FaHome,
 } from "react-icons/fa";
 import { SiXdadevelopers } from "react-icons/si";
+import { CgCodeSlash } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container } from "@/styles/Global";
@@ -75,6 +76,7 @@ export const NavLinks = (): JSX.Element => {
   const location = useLocation();
 
   const isAboutPage = location.pathname.endsWith("/about");
+  const isProjectsPage = location.pathname.endsWith("/projects");
 
   return (
     <NavbarLinks>
@@ -122,6 +124,17 @@ export const NavLinks = (): JSX.Element => {
           onClick={() => navigate(isAboutPage ? "/" : "/about")}
         >
           {isAboutPage ? <FaHome /> : <SiXdadevelopers />}
+        </Button>
+      )}
+      {userData.projetos && (
+        <Button
+          type="icon"
+          target="_blank"
+          as="a"
+          aria-label="LinkedIn"
+          onClick={() => navigate(isProjectsPage ? "/" : "/projects")}
+        >
+          {isProjectsPage ? <FaHome /> : <CgCodeSlash />}
         </Button>
       )}
     </NavbarLinks>

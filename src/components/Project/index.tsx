@@ -20,14 +20,20 @@ interface ReposType {
   homepage: string;
 }
 
-export const Project = (): JSX.Element => {
+interface ProjectsPageProps {
+  customStyles?: any;
+}
+
+export const Project = ({
+  customStyles = {},
+}: ProjectsPageProps): JSX.Element => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const data: Response = await fetch(
         `https://api.github.com/users/${userData.githubUser}/repos`
-      )
+      );
 
       const json = await data.json();
 
@@ -45,7 +51,7 @@ export const Project = (): JSX.Element => {
   return (
     <>
       {repositories?.map((repository) => (
-        <ProjectWrapper key={repository.id}>
+        <ProjectWrapper key={repository.id} css={customStyles}>
           <Text
             as="h2"
             type="heading3"
