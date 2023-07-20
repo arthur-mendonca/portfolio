@@ -8,6 +8,7 @@ import {
   FirstUpperBlock,
   MiddleUpperBlock,
   LastUpperBlock,
+  Greetings,
 } from "./style";
 
 const About = () => {
@@ -24,7 +25,9 @@ const About = () => {
       <h1>About</h1>
       <UpperSection>
         <FirstUpperBlock>
-          Olá, meu nome é Arthur Mendonça e é um prazer ter você aqui.
+          <Greetings>
+            Olá, meu nome é Arthur Mendonça e é um prazer ter você aqui.
+          </Greetings>
         </FirstUpperBlock>
         <MiddleUpperBlock>
           ▶️ Full stack developer
