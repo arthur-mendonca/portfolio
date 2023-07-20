@@ -88,10 +88,17 @@ export const MiddleBlock = styled("div", {
 export const LastBlock = styled("div", {
   flex: "1",
   padding: "20px",
+  justifyContent: "center",
+  display: "flex",
+  gap: "1rem",
+  alignItems: "center",
 
   backgroundColor: "#94cbcb",
   "@media(max-width: 768px)": {
-    display: "none",
+    justifyContent: "center",
+    display: "flex",
+    gap: "1rem",
+    padding: "3rem",
   },
 });
 

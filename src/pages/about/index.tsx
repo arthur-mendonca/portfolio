@@ -1,3 +1,4 @@
+import { Button } from "@/styles/Buttons";
 import {
   FirstBlock,
   LastBlock,
@@ -10,6 +11,9 @@ import {
   LastUpperBlock,
   Greetings,
 } from "./style";
+
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { userData } from "@/utils/userData";
 
 const About = () => {
   function calcularIdade(dataNascimento: string): number {
@@ -78,7 +82,35 @@ const About = () => {
           Estou sempre aberto para novos projetos e oportunidades. Sinta-se à
           vontade para entrar em contato.
         </MiddleBlock>
-        <LastBlock></LastBlock>
+        <LastBlock>
+          <Button
+            type="circle"
+            target="_blank"
+            as="a"
+            aria-label="Github"
+            href={`https://github.com/${userData.githubUser}`}
+          >
+            <FaGithub size={30} />
+          </Button>
+          <Button
+            type="circle"
+            target="_blank"
+            as="a"
+            aria-label="Github"
+            href={`https://github.com/${userData.githubUser}`}
+          >
+            <FaLinkedinIn size={28} />
+          </Button>
+          <Button
+            type="circle"
+            target="_blank"
+            as="a"
+            aria-label="Github"
+            href={`https://github.com/${userData.githubUser}`}
+          >
+            <FaWhatsapp size={25} />
+          </Button>
+        </LastBlock>
       </LowerSection>
     </div>
   );
