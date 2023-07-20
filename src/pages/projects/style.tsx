@@ -4,7 +4,7 @@ export const ProjectsPageWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fill, minmax(350px, 2fr))",
   gridGap: "20px",
-  padding: "3rem 2rem",
+  padding: "2rem 1rem",
 });
 
 export const styles = {
