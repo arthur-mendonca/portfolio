@@ -7,8 +7,5 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
   },
-  build: {
-    outDir: "build",
-  },
-  base: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
+  base: "/portfolio/",
 });
