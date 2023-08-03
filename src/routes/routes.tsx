@@ -6,7 +6,7 @@ import { ProjectsPage } from "@/pages/projects";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/portfolio" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<ProjectsPage />} />
     </Routes>
