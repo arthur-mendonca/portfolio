@@ -36,7 +36,6 @@ const About = () => {
         <MiddleUpperBlock>
           ▶️ Full stack developer
           <br />
-          ▶️ {calcularIdade("1991-09-13")} anos <br />
           ▶️ Javascript, CSS, HTML, React.js, TypeScript, Node.js, Express.js,
           Python, Django, DRF, SQL, TypeORM, Three.js, UI Path Studio,
           <br />
