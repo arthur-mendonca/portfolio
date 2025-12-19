@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useMedia from "use-media";
+import { useMedia } from "@/utils/useMedia";
 import { userData } from "@/utils/userData";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -31,7 +31,7 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
-  const isWide = useMedia({ maxWidth: "991px" });
+  const isWide = useMedia("(max-width: 991px)");
 
   document.title = userData.nameUser;
 
